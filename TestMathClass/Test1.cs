@@ -75,6 +75,27 @@ namespace TestMathClass
             //Assert
             Assert.AreEqual(res, forventetRes);
         }
+
+
+
+        [DataTestMethod]
+        [DataRow(4, 2)]
+        [DataRow(11, 3.31)]
+        [DataRow(0, 0)]
+        [DataRow(5, 2.23)]
+        [TestMethod]
+        public void SquareRoot(int a, double forventetRes)
+        {
+            //Arrange
+            MathClas math = new MathClas();
+
+            //Act
+            double res = math.SquareRoot(a);
+
+            //Assert
+            Assert.AreEqual(res, forventetRes,0.01);
+        }
+
     }
 
 }
